@@ -27,7 +27,7 @@ class InventoryControl:
     def get_quantities_to_buy(self):
         ordem_de_compra = self.MINIMUM_INVENTORY.copy() 
 
-        for ingredient in self.PEDIDOS:
+        for ingredient in self.ESTOQUE:
             ordem_de_compra[ingredient] -= self.ESTOQUE[ingredient]
 
         return ordem_de_compra
