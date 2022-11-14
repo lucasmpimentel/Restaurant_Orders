@@ -17,6 +17,7 @@ def pratos_mais_pedidos(arquivo, alvo):
 
     return max(prato, key=prato.get)
 
+
 def contador_de_pedidos(arquivo, alvo, prato):
     result = 0
 
@@ -25,6 +26,7 @@ def contador_de_pedidos(arquivo, alvo, prato):
             result += 1
 
     return result
+
 
 def pratos_nunca_pedidos(arquivo, alvo):
     pratos_pedidos = set()
@@ -36,6 +38,7 @@ def pratos_nunca_pedidos(arquivo, alvo):
 
     return pratos_restaurante.difference(pratos_pedidos)
 
+
 def dias_sem_visitas(arquivo, alvo):
     dias = set()
     dias_visitados = set()
@@ -45,7 +48,8 @@ def dias_sem_visitas(arquivo, alvo):
         if (pedido[0] == alvo):
             dias_visitados.add(pedido[2])
 
-    return dias.difference(dias_visitados) 
+    return dias.difference(dias_visitados)
+
 
 def analyze_log(path_to_file):
     if ".csv" not in path_to_file:

@@ -14,7 +14,7 @@ class TrackOrders:
 
     def get_most_ordered_dish_per_customer(self, customer):
         prato = {}
-    
+
         for pedido in self.pedidos:
             if pedido["customer"] == customer:
                 if pedido["order"] in prato:
@@ -40,7 +40,7 @@ class TrackOrders:
             if (pedido["customer"] == customer):
                 dias_visitados.add(pedido["day"])
 
-        return self.dias.difference(dias_visitados) 
+        return self.dias.difference(dias_visitados)
 
     def get_busiest_day(self):
         dias = {}
