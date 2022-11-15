@@ -15,7 +15,6 @@ class InventoryControl:
         'frango': 50,
     }
 
-
     def __init__(self):
         self.ESTOQUE = self.MINIMUM_INVENTORY.copy()
         self.PEDIDOS = list()
