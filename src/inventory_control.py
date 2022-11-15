@@ -35,7 +35,7 @@ class InventoryControl:
 
         return ordem_de_compra
 
-    def get_avaliable_dishes(self):
+    def get_available_dishes(self):
         for prato in self.INGREDIENTS:
             for ingrediente in self.INGREDIENTS[prato]:
                 if self.ESTOQUE[ingrediente] < 1:
